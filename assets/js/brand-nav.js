@@ -71,6 +71,7 @@ const BRANDS = [
   { name: "PETIT PLUME", href: H("petit-plume.html") },
   { name: "PRADA", href: H("prada.html") },
   { name: "PRADA BEAUTY", href: H("prada-beauty.html") },
+  { name: "PROJECT RUNWAY", href: H("project-runway.html") },
   { name: "RABANNE", href: H("rabanne.html") },
   { name: "RENT THE RUNWAY", href: H("rent-the-runway.html") },
   { name: "SPENCE", href: H("spence.html") },
