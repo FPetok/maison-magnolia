@@ -66,7 +66,7 @@ const BRANDS = [
   { name: "MICHAEL KORS", href: H("michael-kors.html") },
   { name: "MIU MIU", href: H("miumiu.html") },
   { name: "MOSCHINO", href: H("moschino.html") },
-  { name: "NIKE JORDAN", href: H("nikejordan.html") },
+  { name: "NIKE", href: H("nikejordan.html") },
   { name: "PANDORA", href: H("pandora.html") },
   { name: "PETIT PLUME", href: H("petit-plume.html") },
   { name: "PRADA", href: H("prada.html") },

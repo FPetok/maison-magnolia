@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "HUGO": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/67e1740cf05a2d117ba3d6467dad565f/iframe?muted=true&loop=true&controls=false",
     "SANDRO": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/75043d494a95dd24a0514b99ae490fa9/iframe?muted=true&loop=true&controls=false",
     "BALMAIN": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/462900da7b972e0ad311e87306c5f627/iframe?muted=true&loop=true&controls=false",
-    "NIKE JORDAN": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/d1509e3424d2092ea90df3d2275a86b9/iframe?muted=true&loop=true&controls=false",
+    "NIKE": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/d1509e3424d2092ea90df3d2275a86b9/iframe?muted=true&loop=true&controls=false",
     "SPENCE": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/d00625c17ce305d02bab4d80254d51c2/iframe?muted=true&loop=true&controls=false",
     "DAVID YURMAN": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/f9479589839b68d3529e3c72df8c858c/iframe?muted=true&loop=true&controls=false",
     "MARC JACOBS": "https://customer-s2q8ja8z5hc4bkqr.cloudflarestream.com/28d8f0bf0ae210d3b3052148211c8e1a/iframe?muted=true&loop=true&controls=false",
