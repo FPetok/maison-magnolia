@@ -49,6 +49,7 @@ const BRANDS = [
   { name: "AMIRI", href: H("amiri.html") },
   { name: "BALMAIN", href: H("balmain.html") },
   { name: "BMW", href: H("bmw.html") },
+  { name: "BOMBAS", href: H("bombas.html") },
   { name: "BOSS", href: H("boss.html") },
   { name: "BREITLING", href: H("breitling.html") },
   { name: "DAVID YURMAN", href: H("david-yurman.html") },
