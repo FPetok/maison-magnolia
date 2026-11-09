@@ -54,11 +54,38 @@ document.addEventListener("DOMContentLoaded", () => {
   (function hydrateProjectsSources(){
     const projects = document.getElementById("projects");
     if (!projects) return;
-    if (MM_IS_MOBILE) return; // mobile uses Stream iframes instead of <video>
-    if (MM_IS_MOBILE) return; // mobile uses Stream iframes instead of <video>
 
     const vids = Array.from(projects.querySelectorAll("video"));
     if (!vids.length) return;
+
+    const shouldSkipStreamReplacement = (video) => {
+      const slide = video.closest(".slide");
+      return !!(slide && slide.querySelector(".mm-project-stream"));
+    };
+
+    if (MM_IS_MOBILE) {
+      vids.forEach((v) => {
+        if (shouldSkipStreamReplacement(v)) return;
+
+        const hydrate = window.MM_MEDIA && window.MM_MEDIA.hydrateVideoSources
+          ? window.MM_MEDIA.hydrateVideoSources
+          : null;
+
+        if (hydrate) {
+          hydrate(v);
+          return;
+        }
+
+        const sources = Array.from(v.querySelectorAll("source[data-src]"));
+        sources.forEach((s) => {
+          if (!s.getAttribute("src")) {
+            s.setAttribute("src", s.getAttribute("data-src"));
+          }
+        });
+        try { v.load(); } catch (_) {}
+      });
+      return;
+    }
 
     // Use mm-media's hydrator if available (keeps base router behavior)
     const hydrate = window.MM_MEDIA && window.MM_MEDIA.hydrateVideoSources
@@ -141,7 +168,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const titleEl = slide.querySelector(".overlay-title");
     const label = (titleEl?.textContent || "").trim().toUpperCase();
     const src = STREAM[label];
-    if (!src) return;
+    if (!src) {
+      const video = slide.querySelector("video");
+      if (video) {
+        video.style.display = "";
+        video.preload = "metadata";
+        video.setAttribute("preload", "metadata");
+      }
+      return;
+    }
 
     if (slide.querySelector("iframe.mm-project-stream")) return;
 
